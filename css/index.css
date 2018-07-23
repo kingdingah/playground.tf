@@ -26,11 +26,19 @@ html, body
     src: url('../fonts/opensans/OpenSans-SemiBold.ttf');
 }
 
+@font-face
+{
+    font-family: tf2build;
+    src: url('../fonts/tf2build.ttf');
+}
+
+
 /* Main Styles */
 
 span
 {
   font-size: 3.5em;
+  font-family: tf2build;
   color: rgb(37, 35, 33);
   display: block;
   position: absolute;
@@ -41,6 +49,7 @@ span
 p
 {
   font-size: 1.5em;
+  font-family: tf2build;
   color: rgb(37, 35, 33);
   display: block;
   position: absolute;
