@@ -10,6 +10,15 @@ $(document).ready(function() {
 
   $('.parallax-window').parallax({positionY: -100});
 
+  if($(window).width() > 990 && $(window).width() < 1281)
+  {
+    $('.parallax-window').parallax({positionY: -30});
+  }
+
+  $('.navuser img').click(function() {
+      $('.navuser .drop').slideToggle(150);
+  });
+
   $(window).scroll(function() {
     var pixs = $(document).scrollTop()
     pixs = pixs / 100;
