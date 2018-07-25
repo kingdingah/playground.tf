@@ -111,7 +111,7 @@ div.banner-overlay
   mix-blend-mode: screen;
 }
 
-div.quicklinks
+div.quicklinks-alt, div.quicklinks
 {
   padding-top: 25px !important;
   padding-bottom: 50px !important;
@@ -119,6 +119,8 @@ div.quicklinks
   height: auto;
   overflow: auto;
 }
+
+div.quicklinks-alt{display: none;}
 
 div.main h1, div.updates > h1
 {
@@ -133,6 +135,79 @@ div.main h1, div.updates > h1
 
 div.quicklinks > div
 {
+  height: 100%;
+  position: relative;
+}
+
+div.quicklinks > div.qlimg
+{
+  height: 300px;
+}
+
+div.quicklinks > div.qldesc
+{
+  text-align: center;
+  font-family: opensans;
+  font-size: 16px;
+  padding: 4px 0 !important;
+  height: auto;
+}
+
+div.quicklinks > div.qltit
+{
+  width: 300px !important;
+  position: relative;
+  margin-left: calc(50% - 150px);
+  padding: 10px 0 !important;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: montheavy;
+  height: 60px;
+}
+
+div.quicklinks > div.qltit i
+{
+  padding: 0 15px !important;
+  z-index: 5;
+}
+
+div.qltit span
+{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  display: block;
+}
+
+div.qltit span:hover
+{
+  cursor: pointer;
+}
+
+#hidetitle
+{
+  position: absolute;
+  z-index: 0;
+  display: none;
+}
+
+.fa-angle-left
+{
+  position: absolute;
+  opacity: 0.5;
+  left: 0;
+  margin-top: 5px;
+}
+
+.fa-angle-right
+{
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+}
+
+div.quicklinks-alt > div
+{
   width: calc(33.3333333% - 50px) !important;
   float: left;
   height: 100px;
@@ -144,6 +219,14 @@ div.quicklinks > div
   color: #999;
   font-size: 1.8em;
   font-family: montheavy;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+div.quicklinks-alt > div:hover
+{
+  background-color: #ddd;
+  cursor: pointer;
 }
 
 .updates

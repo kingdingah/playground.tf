@@ -7,7 +7,7 @@
 
 @media (min-width: 990px) and (max-width: 1280px)
 {
-  div.quicklinks
+  div.quicklinks, .innerupdates, .innerfooter
   {
     width: 990px !important;
   }
@@ -34,6 +34,9 @@
   .navsignin
   {
     right: 25px;
+    height: 36px;
+    margin-top: 12px;
+    line-height: 28px;
   }
 
   .navlogo
@@ -43,12 +46,12 @@
 
   .navlogo img
   {
-    height: 36px;
-    margin-top: 12px;
+    height: 26px;
+    margin-top: 17px;
     width: auto;
   }
 
-  div.quicklinks > div
+  div.quicklinks-alt > div
   {
     height: 100px;
     line-height: 100px;

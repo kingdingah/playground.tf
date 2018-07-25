@@ -16,13 +16,14 @@ $(document).ready(function() {
   }
 
   $('.navuser img').click(function() {
-      $('.navuser .drop').slideToggle(150);
+      $('.navuser .drop').slideToggle(100);
+      $('.navuser .triangle').slideToggle(100);
   });
 
   $(window).scroll(function() {
     var pixs = $(document).scrollTop()
     pixs = pixs / 100;
-    pixs2 = 1 - ((pixs / 5));
+    pixs2 = 1 - ((pixs / 3));
 
     $('.parallax-mirror img').css({
       'filter':'blur(' + pixs + 'px)'
@@ -32,7 +33,7 @@ $(document).ready(function() {
       'opacity': pixs2
     });
 
-    if($(document).scrollTop() > bh)
+    if($(document).scrollTop() > (bh-50))
     {
       $('.navsignin').css({
         'color':'#252525',
@@ -40,7 +41,10 @@ $(document).ready(function() {
         'background-color':'rgba(0,0,0,0)'
       });
 
-      $('.sitenav').css({'background-color': 'white'});
+      $(".drop").stop().animate({top:'80px'},150);
+      $(".triangle").stop().animate({top:'60px'},150);
+
+      $('.navbg').slideDown(100);
 
       $('.navsignin').hover(function() {
         $('.navsignin').css({
@@ -67,7 +71,10 @@ $(document).ready(function() {
         'background-color':'rgba(0,0,0,0)'
       });
 
-      $('.sitenav').css({'background-color': 'rgba(0,0,0,0)'});
+      $(".drop").stop().animate({top:'70px'},150);
+      $(".triangle").stop().animate({top:'50px'},150);
+
+      $('.navbg').slideUp(100);
 
       $('.navsignin').hover(function() {
         $('.navsignin').css({
@@ -84,6 +91,133 @@ $(document).ready(function() {
       });
 
       $('.navlogo img').attr('src', 'img/logo.svg');
+    }
+  });
+
+  var itemtitle = $("#showtitle").text();
+  var itemtitlehide = $("#hidetitle").text();
+  var itemimgsrc = $(".qlimg img").attr('src');
+  var itemdesc = $(".qldesc").text();
+
+  console.log(itemimgsrc);
+
+  $(".fa-angle-right").click(function() {
+    if(itemtitle == "ROULETTE")
+    {
+      itemtitlehide = "BINGO";
+      itemdesc = "bingo text";
+      itemimgsrc = "img/home/bingo.png";
+
+      $(".fa-angle-left").css({'opacity': '1'});
+      $("#showtitle").fadeOut(200);
+      $("#hidetitle").text(itemtitlehide).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+    else if(itemtitlehide == "BINGO")
+    {
+      itemtitle = "ICEBREAKER";
+      itemdesc = "icebreaker text";
+      itemimgsrc = "img/home/icebreaker.png";
+
+      $("#hidetitle").fadeOut(200);
+      $("#showtitle").text(itemtitle).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+    else if(itemtitle == "ICEBREAKER")
+    {
+      itemtitlehide = "VERSUS";
+      itemdesc = "versus text";
+      itemimgsrc = "img/home/versus.png";
+
+      $("#showtitle").fadeOut(200);
+      $("#hidetitle").text(itemtitlehide).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+    else if(itemtitlehide == "VERSUS")
+    {
+      itemtitle = "CHALLENGE";
+      itemdesc = "challenge text";
+      itemimgsrc = "img/home/challenge.png";
+
+      $("#hidetitle").fadeOut(200);
+      $("#showtitle").text(itemtitle).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+    else
+    {
+      itemtitlehide = "OTHER";
+      itemdesc = "other text";
+      itemimgsrc = "img/home/other.png";
+
+      $(".fa-angle-right").css({'opacity': '0.5'});
+      $("#showtitle").fadeOut(200);
+      $("#hidetitle").text(itemtitlehide).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+  });
+
+  $(".fa-angle-left").click(function() {
+    if(itemtitlehide == "OTHER")
+    {
+      itemtitle = "CHALLENGE";
+      itemdesc = "challenge text";
+      itemimgsrc = "img/home/challenge.png";
+
+      $(".fa-angle-right").css({'opacity': '1'});
+      $("#hidetitle").fadeOut(200);
+      $("#showtitle").text(itemtitle).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+    else if(itemtitle == "CHALLENGE")
+    {
+      itemtitlehide = "VERSUS";
+      itemdesc = "versus text";
+      itemimgsrc = "img/home/versus.png";
+
+      $("#showtitle").fadeOut(200);
+      $("#hidetitle").text(itemtitlehide).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+    else if(itemtitlehide == "VERSUS")
+    {
+      itemtitle = "ICEBREAKER";
+      itemdesc = "icebreaker text";
+      itemimgsrc = "img/home/icebreaker.png";
+
+      $("#hidetitle").fadeOut(200);
+      $("#showtitle").text(itemtitle).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+    else if(itemtitle == "ICEBREAKER")
+    {
+      itemtitlehide = "BINGO";
+      itemdesc = "bingo text";
+      itemimgsrc = "img/home/bingo.png";
+
+      $("#showtitle").fadeOut(200);
+      $("#hidetitle").text(itemtitlehide).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
+    }
+    else
+    {
+      itemtitle = "ROULETTE";
+      itemdesc = "roulette text";
+      itemimgsrc = "img/home/roulette.png";
+
+      $(".fa-angle-left").css({'opacity': '0.5'});
+      $("#hidetitle").fadeOut(200);
+      $("#showtitle").text(itemtitle).fadeIn(200);
+      $(".qlimg img").attr('src', itemimgsrc);
+      $(".qldesc").html(itemdesc);
     }
   });
 
