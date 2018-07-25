@@ -98,53 +98,54 @@ $(document).ready(function() {
   var itemtitlehide = $("#hidetitle").text();
   var itemimgsrc = $(".qlimg img").attr('src');
   var itemdesc = $(".qldesc").text();
+  var current = "ROULETTE";
 
   console.log(itemimgsrc);
 
   $(".fa-angle-right").click(function() {
-    if(itemtitle == "ROULETTE")
+    if(current == "ROULETTE")
     {
       itemtitlehide = "BINGO";
       itemdesc = "bingo text";
       itemimgsrc = "img/home/bingo.png";
+      current = "BINGO";
 
       $(".fa-angle-left").css({'opacity': '1'});
-      $("#showtitle").fadeOut(200);
-      $("#hidetitle").text(itemtitlehide).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#showtitle").animate({opacity: 0}, 200);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
-    else if(itemtitlehide == "BINGO")
+    else if(current == "BINGO")
     {
       itemtitle = "ICEBREAKER";
       itemdesc = "icebreaker text";
       itemimgsrc = "img/home/icebreaker.png";
+      current = "ICEBREAKER";
 
-      $("#hidetitle").fadeOut(200);
-      $("#showtitle").text(itemtitle).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#hidetitle").animate({opacity: 0}, 200);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
-    else if(itemtitle == "ICEBREAKER")
+    else if(current == "ICEBREAKER")
     {
       itemtitlehide = "VERSUS";
       itemdesc = "versus text";
       itemimgsrc = "img/home/versus.png";
+      current = "VERSUS";
 
-      $("#showtitle").fadeOut(200);
-      $("#hidetitle").text(itemtitlehide).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#showtitle").animate({opacity: 0}, 200);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
-    else if(itemtitlehide == "VERSUS")
+    else if(current == "VERSUS")
     {
       itemtitle = "CHALLENGE";
       itemdesc = "challenge text";
       itemimgsrc = "img/home/challenge.png";
+      current = "CHALLENGE";
 
-      $("#hidetitle").fadeOut(200);
-      $("#showtitle").text(itemtitle).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#hidetitle").animate({opacity: 0}, 200);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
     else
@@ -152,59 +153,59 @@ $(document).ready(function() {
       itemtitlehide = "OTHER";
       itemdesc = "other text";
       itemimgsrc = "img/home/other.png";
+      current = "OTHER";
 
       $(".fa-angle-right").css({'opacity': '0.5'});
-      $("#showtitle").fadeOut(200);
-      $("#hidetitle").text(itemtitlehide).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#showtitle").animate({opacity: 0}, 200);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
   });
 
   $(".fa-angle-left").click(function() {
-    if(itemtitlehide == "OTHER")
+    if(current == "OTHER")
     {
       itemtitle = "CHALLENGE";
       itemdesc = "challenge text";
       itemimgsrc = "img/home/challenge.png";
+      current = "CHALLENGE";
 
       $(".fa-angle-right").css({'opacity': '1'});
-      $("#hidetitle").fadeOut(200);
-      $("#showtitle").text(itemtitle).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#hidetitle").animate({opacity: 0}, 200);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
-    else if(itemtitle == "CHALLENGE")
+    else if(current == "CHALLENGE")
     {
       itemtitlehide = "VERSUS";
       itemdesc = "versus text";
       itemimgsrc = "img/home/versus.png";
+      current = "VERSUS";
 
-      $("#showtitle").fadeOut(200);
-      $("#hidetitle").text(itemtitlehide).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#showtitle").animate({opacity: 0}, 200);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
-    else if(itemtitlehide == "VERSUS")
+    else if(current == "VERSUS")
     {
       itemtitle = "ICEBREAKER";
       itemdesc = "icebreaker text";
       itemimgsrc = "img/home/icebreaker.png";
+      current = "ICEBREAKER";
 
-      $("#hidetitle").fadeOut(200);
-      $("#showtitle").text(itemtitle).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#hidetitle").animate({opacity: 0}, 200);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
-    else if(itemtitle == "ICEBREAKER")
+    else if(current == "ICEBREAKER")
     {
       itemtitlehide = "BINGO";
       itemdesc = "bingo text";
       itemimgsrc = "img/home/bingo.png";
+      current = "BINGO";
 
-      $("#showtitle").fadeOut(200);
-      $("#hidetitle").text(itemtitlehide).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#showtitle").animate({opacity: 0}, 200);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
     else
@@ -212,11 +213,11 @@ $(document).ready(function() {
       itemtitle = "ROULETTE";
       itemdesc = "roulette text";
       itemimgsrc = "img/home/roulette.png";
+      current = "ROULETTE";
 
       $(".fa-angle-left").css({'opacity': '0.5'});
-      $("#hidetitle").fadeOut(200);
-      $("#showtitle").text(itemtitle).fadeIn(200);
-      $(".qlimg img").attr('src', itemimgsrc);
+      $("#hidetitle").animate({opacity: 0}, 200);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
       $(".qldesc").html(itemdesc);
     }
   });

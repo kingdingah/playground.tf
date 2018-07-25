@@ -167,8 +167,9 @@ div.quicklinks > div.qltit
 
 div.quicklinks > div.qltit i
 {
-  padding: 0 15px !important;
+  padding: 10px 16px !important;
   z-index: 5;
+  margin-top: -5px;
 }
 
 div.qltit span
@@ -179,16 +180,17 @@ div.qltit span
   display: block;
 }
 
-div.qltit span:hover
+div.qltit i:hover
 {
   cursor: pointer;
+  background-color: rgba(0,0,0,0.1);
 }
 
 #hidetitle
 {
   position: absolute;
   z-index: 0;
-  display: none;
+  opacity: 0;
 }
 
 .fa-angle-left
