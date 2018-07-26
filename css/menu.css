@@ -109,7 +109,7 @@
   width: auto;
 }
 
-.triangle
+.navuser .triangle
 {
   position: absolute;
   z-index: 101;
@@ -122,4 +122,75 @@
   border-bottom: 15px solid transparent;
   border-right: 15px solid white;
   display: none;
+}
+
+#signin
+{
+  width: 300px;
+  height: auto;
+  position: absolute;
+  z-index: 120;
+  top: 70px;
+  right: 25px;
+  background: white;
+  display: none;
+  border-radius: 6px 0 6px 6px;
+}
+
+#signin .triangle
+{
+  position: absolute;
+  z-index: 101;
+  right: -2px;
+  top: -20px;
+  width: 0;
+  height: 0;
+  transform: rotate(-135deg);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid white;
+  display: block;
+}
+
+#signin input
+{
+  width: calc(100% - 50px);
+  margin: 0 25px 10px 25px;
+  padding: 2px 5px !important;
+  border: 2px solid #eee;
+  outline: none;
+  background-color: #f7f7f7;
+  font-family: opensans;
+}
+
+.login
+{
+  padding: 5px 0 !important;
+  border-bottom: 1px solid #eee;
+  margin: 0 15px !important;
+  width: calc(100% - 30px);
+}
+
+.login h4, .signup h4
+{
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  padding: 12px 0 0 0 !important;
+  margin-bottom: 0 !important;
+  font-family: montheavy;
+}
+
+.login span, .signup span
+{
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 10px !important;
+  font-family: opensans;
+}
+
+.signup
+{
+
 }

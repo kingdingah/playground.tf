@@ -16,8 +16,14 @@ $(document).ready(function() {
   }
 
   $('.navuser img').click(function() {
-      $('.navuser .drop').slideToggle(100);
-      $('.navuser .triangle').slideToggle(100);
+      $('#signin').fadeOut(100);
+      $('.navuser .drop').fadeToggle(100);
+      $('.navuser .triangle').fadeToggle(100);
+  });
+
+  $(".navsignin").click(function() {
+    $('.navuser .drop').fadeOut(100);
+    $("#signin").fadeToggle(100);
   });
 
   $(window).scroll(function() {
@@ -111,8 +117,8 @@ $(document).ready(function() {
       current = "BINGO";
 
       $(".fa-angle-left").css({'opacity': '1'});
-      $("#showtitle").animate({opacity: 0}, 200);
-      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
+      $("#showtitle").animate({opacity: 0}, 100);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
     else if(current == "BINGO")
@@ -122,8 +128,8 @@ $(document).ready(function() {
       itemimgsrc = "img/home/icebreaker.png";
       current = "ICEBREAKER";
 
-      $("#hidetitle").animate({opacity: 0}, 200);
-      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
+      $("#hidetitle").animate({opacity: 0}, 100);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
     else if(current == "ICEBREAKER")
@@ -133,8 +139,8 @@ $(document).ready(function() {
       itemimgsrc = "img/home/versus.png";
       current = "VERSUS";
 
-      $("#showtitle").animate({opacity: 0}, 200);
-      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
+      $("#showtitle").animate({opacity: 0}, 100);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
     else if(current == "VERSUS")
@@ -144,8 +150,8 @@ $(document).ready(function() {
       itemimgsrc = "img/home/challenge.png";
       current = "CHALLENGE";
 
-      $("#hidetitle").animate({opacity: 0}, 200);
-      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
+      $("#hidetitle").animate({opacity: 0}, 100);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
     else
@@ -156,8 +162,8 @@ $(document).ready(function() {
       current = "OTHER";
 
       $(".fa-angle-right").css({'opacity': '0.5'});
-      $("#showtitle").animate({opacity: 0}, 200);
-      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
+      $("#showtitle").animate({opacity: 0}, 100);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
   });
@@ -171,8 +177,8 @@ $(document).ready(function() {
       current = "CHALLENGE";
 
       $(".fa-angle-right").css({'opacity': '1'});
-      $("#hidetitle").animate({opacity: 0}, 200);
-      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
+      $("#hidetitle").animate({opacity: 0}, 100);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
     else if(current == "CHALLENGE")
@@ -182,8 +188,8 @@ $(document).ready(function() {
       itemimgsrc = "img/home/versus.png";
       current = "VERSUS";
 
-      $("#showtitle").animate({opacity: 0}, 200);
-      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
+      $("#showtitle").animate({opacity: 0}, 100);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
     else if(current == "VERSUS")
@@ -193,8 +199,8 @@ $(document).ready(function() {
       itemimgsrc = "img/home/icebreaker.png";
       current = "ICEBREAKER";
 
-      $("#hidetitle").animate({opacity: 0}, 200);
-      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
+      $("#hidetitle").animate({opacity: 0}, 100);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
     else if(current == "ICEBREAKER")
@@ -204,8 +210,8 @@ $(document).ready(function() {
       itemimgsrc = "img/home/bingo.png";
       current = "BINGO";
 
-      $("#showtitle").animate({opacity: 0}, 200);
-      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 200);
+      $("#showtitle").animate({opacity: 0}, 100);
+      $("#hidetitle").text(itemtitlehide).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
     else
@@ -216,8 +222,8 @@ $(document).ready(function() {
       current = "ROULETTE";
 
       $(".fa-angle-left").css({'opacity': '0.5'});
-      $("#hidetitle").animate({opacity: 0}, 200);
-      $("#showtitle").text(itemtitle).animate({opacity: 1}, 200);
+      $("#hidetitle").animate({opacity: 0}, 100);
+      $("#showtitle").text(itemtitle).animate({opacity: 1}, 100);
       $(".qldesc").html(itemdesc);
     }
   });
